@@ -1,4 +1,4 @@
-﻿-- file: ch04\ch04exercises.hs
+-- file: ch04\ch04exercises.hs
 
 import Data.List
 import Data.Ord
