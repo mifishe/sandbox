@@ -1,4 +1,4 @@
--- file: ch04\ch04exercises.hs
+-- file: ch04\ch04exercises01.hs
 
 import Data.List
 import Data.Ord
@@ -36,3 +36,4 @@ splitWith splitCond list = firstHead ++ splitWith splitCond (fromMaybe [] (safeT
             _       -> [first]
 
         (first, rest) = span splitCond list
+
