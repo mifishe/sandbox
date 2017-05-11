@@ -12,10 +12,12 @@ asInt :: String -> Int
 asInt xs = loop 0 xs
 
 asInt_foldl :: String -> Int
+asInt_foldl ('-':xs) = -1 * (asInt_foldl xs)
 asInt_foldl xs = foldl step 0 xs
     where step acc x = acc * 10 + digitToInt x
 
 asInt_foldr :: String -> Int
+asInt_foldr ('-':xs) = -1 * (asInt_foldr xs)
 asInt_foldr xs = result
     where
         (result, _) = foldr step (0, 1) xs
