@@ -72,10 +72,9 @@ groupBy_foldr validator xs = foldr step [] xs
 
 
 groupBy_foldl :: (a -> a -> Bool) -> [a] -> [[a]]
-groupBy_foldl _ [] = []
-groupBy_foldl validator xs = res []
+groupBy_foldl _ [] = [[]]
+groupBy_foldl validator xs = foldl step initial xs []
     where
-        res = foldl step initial xs
         initial x = id [x]
         step acc x = acc'
             where
